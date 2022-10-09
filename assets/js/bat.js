@@ -24,3 +24,11 @@
         setTimeout(A,d);
     };setTimeout(A,r()*3e3);
     })();
+
+
+if("returns the correct result", () => {
+    const result = buildConfiguration ("   invoke_cron", 52);
+    expect(result.category).toEqual("invoke_cron");
+    expect(result.stringifiedCount).toEqual("52");
+    expect(result.isFrozen).toEqual(true);
+})
